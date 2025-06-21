@@ -23,8 +23,7 @@ const Navigation: React.FC<NavigationProps> = ({
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 200, damping: 25 });
   const springY = useSpring(mouseY, { stiffness: 200, damping: 25 });
-
-  // track mouse inside navbar
+ 
   useEffect(() => {
     const move = (e: MouseEvent) => {
       if (navRef.current) {
@@ -62,8 +61,7 @@ const Navigation: React.FC<NavigationProps> = ({
           ? 'bg-slate-900/95 backdrop-blur-lg border-b border-slate-800'
           : 'bg-transparent'
       }`}
-    >
-      {/* Fluid glow blob */}
+    > 
       {hovered && (
         <motion.div
           className="absolute z-0 w-40 h-40 bg-cyan-400/20 blur-2xl rounded-full pointer-events-none"
@@ -78,8 +76,7 @@ const Navigation: React.FC<NavigationProps> = ({
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-
-          {/* Logo */}
+ 
           <motion.div
             onClick={() => scrollToSection('home')}
             whileHover={{ scale: 1.1, rotateY: 10 }}
@@ -92,8 +89,7 @@ const Navigation: React.FC<NavigationProps> = ({
               Inlighn Tech
             </span>
           </motion.div>
-
-          {/* Desktop Nav */}
+ 
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <motion.button
@@ -114,8 +110,7 @@ const Navigation: React.FC<NavigationProps> = ({
               </motion.button>
             ))}
           </div>
-
-          {/* Mobile Toggle */}
+ 
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             whileTap={{ scale: 0.9 }}
@@ -125,8 +120,7 @@ const Navigation: React.FC<NavigationProps> = ({
           </motion.button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
+ 
       <motion.div
         initial={{ height: 0, opacity: 0 }}
         animate={{
@@ -142,7 +136,7 @@ const Navigation: React.FC<NavigationProps> = ({
   key={item.id}
   onClick={() => {
     setIsMenuOpen(false);
-    setTimeout(() => scrollToSection(item.id), 100); // Delay to allow menu close animation
+    setTimeout(() => scrollToSection(item.id), 100); 
   }}
   whileHover={{
     scale: 1.05,

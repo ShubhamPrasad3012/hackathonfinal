@@ -14,8 +14,7 @@ const CertificateVerification: React.FC = () => {
   return (
     <section id="verify" className="relative py-24 bg-gradient-to-br from-slate-900 to-black overflow-hidden">
       <Orbs />
-
-      {/* Extra floating 3D orb */}
+ 
       <motion.div
         className="absolute w-40 h-40 rounded-full bg-gradient-to-br from-pink-500 to-yellow-400 blur-3xl opacity-30"
         animate={{ y: [0, -20, 20, 0], rotate: [0, 180, 0] }}
@@ -24,7 +23,7 @@ const CertificateVerification: React.FC = () => {
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Title & Subtitle */}
+        
         <div className="text-center mb-16">
           <motion.h2
   className="text-4xl sm:text-5xl font-extrabold text-center leading-tight mb-6"
@@ -49,15 +48,14 @@ const CertificateVerification: React.FC = () => {
             Enter your certificate ID to confirm the authenticity of your Inlighn Tech certification.
           </motion.p>
         </div>
-
-        {/* Form Container */}
+ 
         <motion.div
           className="relative bg-white/5 backdrop-blur-2xl p-10 rounded-3xl border border-slate-700 shadow-[0_0_60px_0_rgba(0,255,255,0.1)]"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Glowing top border */}
+           
           <motion.div
   className="mx-auto mt-[-0.5rem] h-[3px] w-32 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur-md animate-pulse"
   initial={{ scaleX: 0 }}
@@ -68,7 +66,7 @@ const CertificateVerification: React.FC = () => {
 
 
           <form onSubmit={handleSubmit} className="space-y-8">
-            {/* Input */}
+             
             <div>
               <label
                 htmlFor="certificateId"
@@ -90,7 +88,7 @@ const CertificateVerification: React.FC = () => {
               />
             </div>
 
-            {/* Submit */}
+           
             <motion.button
               type="submit"
               whileHover={{ scale: 1.06 }}
@@ -101,7 +99,7 @@ const CertificateVerification: React.FC = () => {
             </motion.button>
           </form>
 
-          {/* Tips */}
+         
           <div className="mt-10 bg-slate-900/50 border border-slate-700 rounded-xl p-6 shadow-inner">
             <h4 className="text-lg text-white font-semibold mb-3 underline underline-offset-4 decoration-fuchsia-500">How to find your Certificate ID:</h4>
             <ul className="space-y-3 text-gray-300 text-sm">

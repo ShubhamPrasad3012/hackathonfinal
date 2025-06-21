@@ -7,7 +7,7 @@ import CertificateVerification from './components/CertificateVerification';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NewCursor from './components/NewCursor';
-import FuturisticLoader from './components/Loader'; // ⬅ custom loader
+import FuturisticLoader from './components/Loader'; 
 import { useScrollTracking } from './hooks/useScrollTracking';
 
 
@@ -22,7 +22,7 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) return <FuturisticLoader />; // ⬅ use custom loader here
+  if (loading) return <FuturisticLoader />; 
 
   return (
     <div className="min-h-screen font-orbitron tracking-widestCustom bg-slate-900 text-white overflow-x-hidden">

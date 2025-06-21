@@ -10,18 +10,17 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
   return (
     <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900/80 backdrop-blur-2xl text-white"
-    >
-      {/* 🔵 Background Orbs */}
+  id="home"
+  className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900/80 backdrop-blur-2xl text-white pt-24 md:pt-0"
+>
+ 
       <Orbs />
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-10 left-16 w-72 h-72 bg-cyan-400/20 rounded-full blur-[140px] animate-pulse" />
         <div className="absolute bottom-16 right-12 w-[500px] h-[500px] bg-fuchsia-600/20 rounded-full blur-[200px] animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-blue-400/10 via-purple-600/10 to-pink-400/10 rounded-full blur-[140px] -translate-x-1/2 -translate-y-1/2" />
       </div>
-
-      {/* 🟣 Floating Decorative Orbs */}
+ 
       <div className="absolute inset-0 z-0 pointer-events-none">
         <motion.div
           animate={{ y: [0, -10, 10, 0] }}
@@ -39,12 +38,10 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
           className="absolute top-[50%] left-[65%] w-10 h-10 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-xl shadow-xl shadow-blue-500/20"
         />
       </div>
-
-      {/* 🧠 Main Layout */}
+ 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 animate-fade-in">
-
-        {/* ✨ Text Content (Left) */}
-        <div className="flex-1 text-center mt-8 lg:text-left space-y-10">
+ 
+        <div className="flex-1 text-center lg:text-left space-y-12">
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold leading-tight"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -92,8 +89,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
               <span className="absolute inset-0 rounded-xl border border-white/5 blur-[1px] animate-flicker pointer-events-none"></span>
             </button>
           </motion.div>
-
-          {/* 🏷️ Feature Tags */}
+ 
           <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4 opacity-90">
             {[{ icon: BadgeCheck, label: 'Certified Programs' }, { icon: Flame, label: 'High-Paying Skills' }].map(
               ({ icon: Icon, label }, i) => (
@@ -109,8 +105,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
             )}
           </div>
         </div>
-
-        {/* 📦 Card Transition (Right Side) */}
+ 
         <div className="flex-1 flex justify-center items-center relative min-h-[200px] md:min-h-[550px]">
   <CardSwap
     cardDistance={60}

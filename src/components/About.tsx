@@ -44,7 +44,6 @@ const About: React.FC = () => {
     <section id="about" className="relative py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-black overflow-hidden">
       <Orbs />
 
-      {/* 🔵 Cursor Glow */}
       <div
         ref={cursorRef}
         className="fixed z-50 w-10 h-10 rounded-full bg-cyan-400/20 backdrop-blur pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100"
@@ -67,7 +66,7 @@ const About: React.FC = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-20 items-center mb-24">
-          {/* 🚀 Features */}
+          
           <motion.div
             className="space-y-6"
             initial="hidden"
@@ -104,7 +103,6 @@ const About: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* 📊 Stats */}
           <motion.div
             className="grid grid-cols-2 gap-8"
             initial="hidden"

@@ -23,7 +23,8 @@ const Footer: React.FC = () => {
       <Orbs />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="flex flex-col md:grid md:grid-cols-4 gap-12 items-center text-center md:items-start md:text-left">
+
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-600/30">
